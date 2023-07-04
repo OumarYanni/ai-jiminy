@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 20px; 
 }
 
 .App-logo {
