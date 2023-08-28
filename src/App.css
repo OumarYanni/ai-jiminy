@@ -6,12 +6,32 @@
   min-height: 100%;
 }
 
+
+
+/* CSS mis à jour pour gérer les contenus longs dans les cartes */
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 0 20px; 
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
+
+/* Ajout de marge à chaque carte */
+.cards-container .card {
+  flex: 1; /* Utiliser le reste de l'espace disponible */
+  min-width: calc(33.33% - 20px); /* Largeur minimale de 33.33% avec marges */
+  box-sizing: border-box;
+  /* Limiter la hauteur des cartes */
+  max-height: 100%;
+  overflow: hidden;
+}
+
+
 
 .App-logo {
   height: 40vmin;

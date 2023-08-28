@@ -9,6 +9,7 @@ function SearchBar({ onSearch }) {
   };
 
   // Cette fonction est appelée lorsque l'utilisateur soumet le formulaire de recherche
+  // Elle appelle la fonction onSearch passée en tant que prop avec le texte de recherche de l'utilisateur
   const handleSubmit = event => {
     event.preventDefault();
     onSearch(searchText);

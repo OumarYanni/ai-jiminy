@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './App.js';
+import reportWebVitals from './reportWebVitals.js';
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/serviceWorker.js').then(() => {
+      console.log("Service Worker enregistré avec succès!");
+    }, (err) => {
+      console.log("L'enregistrement du Service Worker a échoué: ", err);
+    });
+  });
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +21,7 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Si vous voulez commencer à mesurer les performances dans votre application, passez une fonction
+// pour enregistrer les résultats (par exemple : reportWebVitals(console.log))
+// ou envoyez à un point de terminaison d'analyse. En savoir plus : https://bit.ly/CRA-vitals
 reportWebVitals();
