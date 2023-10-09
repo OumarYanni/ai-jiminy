@@ -1,0 +1,7 @@
+/* Styles basés sur une grille */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 1.5rem 0.5rem;
+}

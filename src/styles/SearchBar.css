@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(119, 136, 153, 0.2);
+    width: 100%;  /* Prend toute la largeur de son conteneur */
+    height: 139px;  /* Hauteur fixe comme spécifié */
+    margin: auto 0; /* Centrage vertical */
+}
+  
+input {
+    width: 75%;
+    max-width: 500px;  /* Vous pouvez ajuster cette valeur en fonction de la taille maximale souhaitée pour le champ de saisie */
+}

@@ -9,6 +9,7 @@ footer {
     /* padding: 20px 80px; */
     background: #778899;
     flex-direction: column;
+    padding: 2rem;
   }
   
   footer p {
